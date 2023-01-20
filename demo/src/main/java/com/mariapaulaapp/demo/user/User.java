@@ -24,6 +24,10 @@ public class User {
  @Past(message = "Birth date should not be in past")
  @JsonProperty("birth_date")
  private LocalDate birthdate;
+ 
+ protected User() {
+	 
+ }
 public User(Integer id, String name, LocalDate birthdate) {
 	super();
 	this.id = id;
