@@ -1,12 +1,13 @@
 package com.mariapaulaapp.demo.filtering;
 
+//@JsonIgnoreProperties({"field1","field2"})
 public class SomeBean {
 
 private String field1;
 	
 	private String field2;
 
-	//@JsonIgnore
+	//@JsonIgnore to ignore the field
 	private String field3;
 
 	public SomeBean(String field1, String field2, String field3) {
