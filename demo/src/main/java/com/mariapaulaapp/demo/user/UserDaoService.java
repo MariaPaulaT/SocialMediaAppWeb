@@ -34,7 +34,13 @@ public class UserDaoService {
 		return users.stream().filter(Predicate).findFirst().orElse(null);
 	}
 
-
+	public void deleteById(Integer id) {
+		// TODO Auto-generated method stub
+		Predicate<? super User> Predicate = user -> user.getId()==id;
+		//if it dosnt find the user it returns something else
+		users.removeIf(Predicate);
+	}
+	
 	public User save(User user) {
 		// TODO Auto-generated method stub
 		user.setId(userCount++);
